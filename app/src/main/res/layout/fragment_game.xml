@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg3">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backToHomeButton"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:background="@color/clear"
+            android:contentDescription="@string/home"
+            android:foreground="@drawable/click_effect"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/home_button" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_weight="1"
+            android:background="@drawable/info">
+
+            <TextView
+                android:id="@+id/wealthOfUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/poppins_bold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:textAllCaps="true"
+                android:textSize="17sp"
+                app:drawableStartCompat="@drawable/icn_coin"
+                tools:text="182309128" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/gameField"
+        android:layout_width="324dp"
+        android:layout_height="340dp"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout2" />
+
+    <ImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:visibility="invisible"
+        tools:visibility="visible"
+        android:contentDescription="@string/nothing"
+        android:translationX="-11dp"
+        android:translationY="272dp"
+        app:layout_constraintStart_toStartOf="@+id/gameField"
+        app:layout_constraintTop_toTopOf="@+id/gameField"
+        app:srcCompat="@drawable/ball" />
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <include layout="@layout/pillars" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/multiplier_a"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/multiplier_a" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/multiplier_b"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/multiplier_b" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/multiplier_c"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/multiplier_c" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/multiplier_d"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/multiplier_d" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/multiplier_e"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/multiplier_e" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/multiplier_f"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/multiplier_f" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/multiplier_g"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/multiplier_g" />
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="24dp"
+                android:layout_marginHorizontal="1dp"
+                android:background="@drawable/multiplier_h"
+                android:fontFamily="@font/poppins_semibold"
+                android:gravity="center"
+                android:text="@string/multiplier_h" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/poppins_semibold"
+                android:paddingVertical="16dp"
+                android:text="@string/ball_price"
+                android:textAllCaps="true"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bet">
+
+                <TextView
+                    android:id="@+id/ballPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:drawablePadding="6dp"
+                    android:fontFamily="@font/poppins_bold"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:minWidth="117dp"
+                    android:paddingHorizontal="24dp"
+                    android:paddingVertical="13dp"
+                    android:textAllCaps="true"
+                    android:textSize="17sp"
+                    app:drawableStartCompat="@drawable/icn_coin"
+                    tools:text="9999" />
+
+                <ImageView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/nothing"
+                    app:srcCompat="@drawable/white_box" />
+
+                <ImageButton
+                    android:id="@+id/decrease"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/clear"
+                    android:contentDescription="@string/nothing"
+                    android:foreground="?android:selectableItemBackground"
+                    app:srcCompat="@drawable/decrease" />
+
+                <ImageView
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:contentDescription="@string/nothing"
+                    app:srcCompat="@drawable/white_box" />
+
+                <ImageButton
+                    android:id="@+id/increase"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@color/clear"
+                    android:contentDescription="@string/nothing"
+                    android:foreground="?android:selectableItemBackground"
+                    app:srcCompat="@drawable/increase" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/fastPrice50"
+                    android:layout_width="52dp"
+                    android:layout_height="33dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@drawable/fast_price"
+                    android:text="@string/fifty" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/fastPrice100"
+                    android:layout_width="57dp"
+                    android:layout_height="33dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@drawable/fast_price"
+                    android:text="@string/one_hundred" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/fastPrice200"
+                    android:layout_width="61dp"
+                    android:layout_height="33dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@drawable/fast_price"
+                    android:text="@string/two_hundred" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/fastPrice1000"
+                    android:layout_width="67dp"
+                    android:layout_height="33dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@drawable/fast_price"
+                    android:text="@string/one_thousand" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/sendBall"
+                android:layout_width="145dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="48dp"
+                android:background="@color/clear"
+                android:contentDescription="@string/send_ball"
+                android:foreground="@drawable/click_effect"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/send_ball" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
